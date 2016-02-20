@@ -82,17 +82,7 @@ if not options.serial:
     print ("Error: Facedancer serial port not supplied\n")
     sys.exit()
 else:
-    tmp_serial = options.serial
-
-    if current_platform == "Windows":
-        try:
-            serial0 = int(tmp_serial)-1
-        except:
-            print ("Error: Invalid serial port specification")
-            sys.exit()
-
-    else:
-        serial0 = tmp_serial
+    serial0 = options.serial
 
 def connectserial():
 
